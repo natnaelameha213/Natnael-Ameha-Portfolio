@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Natnael Ameha – Full-Stack Web Developer | PHP &amp; MySQL</title>
+<meta name="description" content="Natnael Ameha, full-stack web developer in Addis Ababa. Business websites and custom systems with PHP, MySQL and JavaScript.">
+<meta name="theme-color" content="#111111">
+<link rel="canonical" href="https://YOUR-DOMAIN.com/">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website"><meta property="og:title" content="Natnael Ameha – Full-Stack Web Developer">
+<meta property="og:description" content="Business websites and custom systems built with PHP, MySQL and JavaScript.">
+<meta property="og:url" content="https://YOUR-DOMAIN.com/"><meta property="og:image" content="https://YOUR-DOMAIN.com/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav"><div class="wrap nav-in">
+  <a href="#home" class="brand"><span class="logo">N</span>Natnael<span class="lime">.</span></a>
+  <nav id="menu">
+    <a href="#home" data-i="home">Home</a><a href="#about" data-i="about">About</a><a href="#projects" data-i="projects">Projects</a>
+    <a href="#services" data-i="services">Services</a><a href="#process" data-i="process">Process</a><a href="#resume" data-i="resume">Resume</a><a href="#contact" data-i="contact">Contact</a>
+  </nav>
+  <select id="lang" aria-label="Language"><option value="en">EN</option><option value="am">አማ</option><option value="ar">عربي</option><option value="fr">FR</option></select>
+  <button id="theme" class="icon" aria-label="Toggle theme">◐</button>
+  <button class="burger icon" id="burger" aria-label="Menu">☰</button>
+</div></header>
+
+<main>
+<section id="home" class="hero"><div class="wrap hero-grid">
+  <div class="reveal">
+    <span class="avail"><i></i><span data-i="avail">Available for freelance</span></span>
+    <p class="eyebrow" data-i="hi">Hi, I'm</p>
+    <h1>Natnael <span class="lime">Ameha</span></h1>
+    <h2><span id="typed"></span><span class="caret">|</span></h2>
+    <p class="lead" data-i="lead">I build fast, secure web applications for real businesses: clinics, hotels, shops, delivery and more.</p>
+    <div class="row">
+      <a href="#projects" class="btn primary" data-i="viewwork">View My Work →</a>
+      <a href="#contact" class="btn ghost" data-i="hire">Hire Me</a>
+      <a href="https://wa.me/251957810134" class="btn ghost" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="assets/Natnael-Ameha-CV.pdf" class="btn ghost" download data-i="cv">Download CV ⬇</a>
+    </div>
+  </div>
+  <div class="portrait reveal"><div class="slash"></div><img src="assets/natnael.jpg" alt="Natnael Ameha"></div>
+</div>
+<div class="wrap stats">
+  <div><b data-count="13">0</b><span data-i="s1">Projects built</span></div>
+  <div><b data-count="10">0</b><span data-i="s2">Full-stack systems</span></div>
+  <div><b data-count="3">0</b><span data-i="s3">Frontend projects</span></div>
+  <div><b>24/7</b><span data-i="s4">Remote worldwide</span></div>
+</div></section>
+
+<section id="about" class="sec"><div class="wrap two">
+  <div class="reveal"><h2 class="title" data-i="about">About</h2>
+    <p>I'm Natnael, a web developer in Addis Ababa. I build the systems that run a business day to day: a clinic with patient records and billing, a hotel that takes bookings, a shop that sells online.</p>
+    <p>Every project here is a working application with a real database, user accounts and an admin side, not a mockup.</p>
+    <div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap 5</span><span>PHP</span><span>MySQL</span><span>Git/GitHub</span><span>REST APIs</span><span>Responsive</span><span>UI/UX</span></div>
+  </div>
+  <ol class="timeline reveal">
+    <li><b>Learning</b><span>HTML, CSS, JavaScript fundamentals</span></li>
+    <li><b>First projects</b><span>Static and booking websites</span></li>
+    <li><b>Full-stack</b><span>PHP + MySQL systems with admin panels</span></li>
+    <li><b>Freelancing</b><span>Building for real clients and businesses</span></li>
+  </ol>
+</div></section>
+
+<section id="projects" class="sec alt"><div class="wrap">
+  <h2 class="title" data-i="projects">Projects</h2>
+  <div class="tools"><div id="filters"></div><input id="search" type="search" placeholder="Search projects…" aria-label="Search projects"></div>
+  <div class="grid3" id="grid"></div>
+  <p class="center muted more">More code on <a class="lime" href="https://github.com/natnaelameha213" target="_blank" rel="noopener">GitHub</a></p>
+</div></section>
+
+<section id="services" class="sec"><div class="wrap">
+  <h2 class="title" data-i="services">Services</h2>
+  <div class="grid3 svc">
+    <div class="card reveal"><h3>Website Development</h3><p>Responsive business sites and landing pages.</p></div>
+    <div class="card reveal"><h3>Full-Stack Development</h3><p>PHP + MySQL apps with login, roles and dashboards.</p></div>
+    <div class="card reveal"><h3>E-commerce</h3><p>Online stores and multi-vendor marketplaces.</p></div>
+    <div class="card reveal"><h3>POS / Inventory &amp; CRM</h3><p>Stock, sales and customer management systems.</p></div>
+    <div class="card reveal"><h3>Website Redesign</h3><p>Modern UI for an existing site, same content.</p></div>
+    <div class="card reveal"><h3>Bug Fixing &amp; Maintenance</h3><p>Fixes, updates and support after launch.</p></div>
+  </div>
+</div></section>
+
+<section id="process" class="sec alt"><div class="wrap">
+  <h2 class="title center" data-i="process">My Process</h2>
+  <ol class="steps"><li><b>01</b>Discover</li><li><b>02</b>Plan</li><li><b>03</b>Design</li><li><b>04</b>Develop</li><li><b>05</b>Test</li><li><b>06</b>Deploy</li></ol>
+  <div class="card center reveal" style="margin-top:28px"><h3>Testimonials</h3><p class="muted">Client feedback will appear here. Coming soon.</p></div>
+</div></section>
+
+<section id="resume" class="sec"><div class="wrap center">
+  <h2 class="title" data-i="resume">Resume</h2>
+  <p class="muted">Skills, projects and experience in one page.</p>
+  <div class="row c"><a class="btn primary" href="assets/Natnael-Ameha-CV.pdf" target="_blank" rel="noopener">View Resume</a><a class="btn ghost" href="assets/Natnael-Ameha-CV.pdf" download>Download CV ⬇</a></div>
+</div></section>
+
+<section id="contact" class="sec alt"><div class="wrap two">
+  <div class="reveal"><h2 class="title big">Let's Work <span class="lime">Together</span></h2>
+    <p>Tell me what you need and I'll reply with a clear quote.</p>
+    <ul class="links card">
+      <li><a href="https://wa.me/251957810134" target="_blank" rel="noopener"><b>WhatsApp</b>+251 957 810 134</a></li>
+      <li><a href="https://t.me/cipherman1321" target="_blank" rel="noopener"><b>Telegram</b>@cipherman1321</a></li>
+      <li><a href="#" id="copyMail"><b>Email (tap to copy)</b>natnaelameha31@gmail.com</a></li>
+      <li><a href="https://github.com/natnaelameha213" target="_blank" rel="noopener"><b>GitHub</b>natnaelameha213</a></li>
+      <li><a href="https://instagram.com/natnael1316" target="_blank" rel="noopener"><b>Instagram</b>@natnael1316</a></li>
+    </ul>
+    <button class="btn ghost" id="share">Share portfolio</button>
+  </div>
+  <form class="card form" id="form" novalidate>
+    <h3>Request a Quote</h3>
+    <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <label>Name<input name="name" required autocomplete="name"></label>
+    <label>Email<input type="email" name="email" required autocomplete="email"></label>
+    <label>Project type<select name="type"><option>Business website</option><option>E-commerce</option><option>POS / Inventory</option><option>CRM / Management system</option><option>Redesign</option><option>Other</option></select></label>
+    <label>Budget<select name="budget"><option>Not sure yet</option><option>Under $300</option><option>$300 – $1,000</option><option>$1,000+</option></select></label>
+    <label>Message<textarea name="message" required maxlength="500"></textarea></label>
+    <button class="btn primary" type="submit">Send Message ➤</button>
+    <p class="status" id="status" role="status"></p>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap foot"><span>© <span id="yr">2026</span> Natnael Ameha</span><span><a href="https://github.com/natnaelameha213">GitHub</a> · <a href="https://t.me/cipherman1321">Telegram</a></span></div></footer>
+
+<div class="modal" id="modal" aria-hidden="true"><div class="box" id="mbox"></div></div>
+<div class="toast" id="toast"></div>
+<button id="top" class="icon" aria-label="Scroll to top">↑</button>
+<script src="script.js"></script>
+</body></html>
