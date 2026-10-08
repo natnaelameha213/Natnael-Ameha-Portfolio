@@ -29,18 +29,18 @@ const en={};$$('[data-i]').forEach(e=>en[e.dataset.i]=e.textContent);T.en=en;
 function setLang(l){const d=T[l]||en;$$('[data-i]').forEach(e=>e.textContent=d[e.dataset.i]||en[e.dataset.i]);document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';S('lang',l)}
 $('#lang').onchange=e=>setLang(e.target.value);const L=S('lang');if(L&&T[L]){$('#lang').value=L;setLang(L)}
 // typing
-const words=['Full-Stack Web Developer','PHP & MySQL Specialist','Freelance Developer'];let wi=0,ci=0,del=0;
+const words=['Full-Stack Web Developer','PHP & MySQL Developer','Admin Dashboards & Systems','Business Website Builder','Freelance Developer'];let wi=0,ci=0,del=0;
 (function ty(){const w=words[wi];ci+=del?-1:1;$('#typed').textContent=w.slice(0,ci);let s=del?35:70;if(!del&&ci===w.length){del=1;s=1400}else if(del&&ci===0){del=0;wi=(wi+1)%words.length;s=300}setTimeout(ty,s)})();
 // projects
-let cat='All',q='',favs=[];try{favs=JSON.parse(S('favs')||'[]')}catch(e){}
-const cats=['All',...new Set(P.map(p=>p.c))];if(favs.length)cats.push('★ Favorites');
-$('#filters').innerHTML=cats.map(c=>`<button class="f${c==='All'?' on':''}" data-c="${c}">${c}</button>`).join('');
+let cat='Featured',q='',favs=[];try{favs=JSON.parse(S('favs')||'[]')}catch(e){}
+const FEAT=['ProClinic','ProHotel','ProStock POS','ProCRM'];const cats=['Featured','All',...new Set(P.map(p=>p.c))];if(favs.length)cats.push('★ Favorites');
+$('#filters').innerHTML=cats.map(c=>`<button class="f${c==='Featured'?' on':''}" data-c="${c}">${c}</button>`).join('');
 $('#filters').onclick=e=>{const b=e.target.closest('.f');if(!b)return;cat=b.dataset.c;$$('.f').forEach(x=>x.classList.toggle('on',x===b));draw()};
 $('#search').oninput=e=>{q=e.target.value.toLowerCase();draw()};
 const thumb=p=>p.img?`<img loading="lazy" src="assets/projects/${p.img}.jpg" alt="${p.n} screenshot">`:`<span>${p.n.slice(0,2)}</span>`;
-function draw(){const list=P.filter(p=>(cat==='All'||(cat[0]==='★'?favs.includes(p.n):p.c===cat))&&(p.n+p.t+p.tech.join()).toLowerCase().includes(q));
+function draw(){const list=P.filter(p=>(cat==='All'||(cat==='Featured'?FEAT.includes(p.n):cat[0]==='★'?favs.includes(p.n):p.c===cat))&&(p.n+p.t+p.tech.join()).toLowerCase().includes(q));
 $('#grid').innerHTML=list.map(p=>`<article class="proj reveal in"><div class="thumb" data-m="${p.n}">${thumb(p)}<button class="fav${favs.includes(p.n)?' on':''}" data-f="${p.n}" aria-label="Favorite">${favs.includes(p.n)?'♥':'♡'}</button></div>
-<div class="pb"><h3>${p.n}</h3><p>${p.t}. ${p.d}</p><div class="tags">${p.tech.map(t=>`<span>${t}</span>`).join('')}</div>
+<div class="pb"><h3>${p.n}</h3><p><b>${p.t}</b><br>${p.feat.join(' • ')}</p><div class="tags">${p.tech.map(t=>`<span>${t}</span>`).join('')}</div>
 <div class="acts"><a class="btn primary sm" href="${p.live}" target="_blank" rel="noopener">Live Demo</a>${p.gh?`<a class="btn ghost sm" href="${GH+p.gh}" target="_blank" rel="noopener">GitHub</a>`:''}<button class="btn ghost sm" data-m="${p.n}">Details</button></div></div></article>`).join('')||'<p class="muted">No projects found.</p>'}
 $('#grid').onclick=e=>{const f=e.target.closest('[data-f]');if(f){const n=f.dataset.f;favs=favs.includes(n)?favs.filter(x=>x!==n):[...favs,n];S('favs',JSON.stringify(favs));draw();return}
 const m=e.target.closest('[data-m]');if(m)openM(P.find(p=>p.n===m.dataset.m))};
